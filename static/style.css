@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 2px solid #333;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+input,
+button {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+}
+
+input:focus {
+  border-color: #555;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #555;
+}
+
+/* ----------------- Login Page Styles ----------------- */
+body#login-page {
+  background-color: #f0f4f7;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+.input-box label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------- Task List Styles ----------------- */
+body#tasks-page {
+  background-color: #f9f9f9;
+}
+
+.task-container {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Task Items */
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Task Info - Title on top, Description below */
+.task-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.task-info strong {
+  padding-left: 2;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-bottom: 3px; /* Space between title and description */
+}
+
+/* Task Actions - Align buttons to the right */
+.task-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: auto; /* Moves buttons to the right */
+}
+
+/* Edit Button */
+.task-actions a {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.task-actions a:hover {
+  background: #0056b3;
+}
+
+/* Delete Button in Task List */
+.task-container .task-actions button {
+  /* Delete Button in Task List */
+  .task-actions form {
+    display: inline; /* Keep form inline with edit link */
+  }
+
+  .task-actions button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .task-actions button:hover {
+    background-color: #b02a37;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    main {
+      padding: 10px;
+    }
+
+    input,
+    button {
+      max-width: 100%;
+    }
+
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .task-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
