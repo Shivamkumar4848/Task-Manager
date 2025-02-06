@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %}
+<div class="home-container">
+  <h2>Welcome to Task Manager</h2>
+  <div class="button-group">
+    <a href="{{ url_for('login') }}" class="btn">Login</a>
+    <a href="{{ url_for('register') }}" class="btn">Register</a>
+  </div>
+</div>
+{% endblock %}

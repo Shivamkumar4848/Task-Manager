@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,7 +11,40 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+.home-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: block;
+  padding: 12px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #555;
+  color: white;
+}
+
 header {
   text-align: center;
   padding: 20px 0;
@@ -27,16 +59,17 @@ header h1 {
   font-weight: bold;
 }
 
-/* Main Content */
 main {
   width: 100%;
   max-width: 600px;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-grow: 1;
 }
 
-/* Forms */
 form {
   display: flex;
   flex-direction: column;
@@ -75,7 +108,21 @@ button:hover {
   background: #555;
 }
 
-/* ----------------- Login Page Styles ----------------- */
+body#register-page {
+  background-color: #f0f4f7;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+}
+
 body#login-page {
   background-color: #f0f4f7;
 }
@@ -125,7 +172,6 @@ body#login-page {
   text-decoration: underline;
 }
 
-/* ----------------- Task List Styles ----------------- */
 body#tasks-page {
   background-color: #f9f9f9;
 }
@@ -140,7 +186,6 @@ body#tasks-page {
   margin-top: 20px;
 }
 
-/* Task Items */
 ul {
   list-style: none;
   padding: 0;
@@ -162,7 +207,6 @@ li {
   position: relative;
 }
 
-/* Task Info - Title on top, Description below */
 .task-info {
   display: flex;
   flex-direction: column;
@@ -174,18 +218,16 @@ li {
   padding-left: 2;
   font-size: 18px;
   font-weight: bolder;
-  margin-bottom: 3px; /* Space between title and description */
+  margin-bottom: 3px;
 }
 
-/* Task Actions - Align buttons to the right */
 .task-actions {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-left: auto; /* Moves buttons to the right */
+  margin-left: auto;
 }
 
-/* Edit Button */
 .task-actions a {
   padding: 8px 12px;
   font-size: 14px;
@@ -201,11 +243,9 @@ li {
   background: #0056b3;
 }
 
-/* Delete Button in Task List */
 .task-container .task-actions button {
-  /* Delete Button in Task List */
   .task-actions form {
-    display: inline; /* Keep form inline with edit link */
+    display: inline;
   }
 
   .task-actions button {
@@ -223,7 +263,6 @@ li {
     background-color: #b02a37;
   }
 
-  /* Responsive Design */
   @media (max-width: 600px) {
     header h1 {
       font-size: 1.5rem;
